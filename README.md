@@ -1,16 +1,17 @@
 
-""Safe_Child_LLM_Benchmark""
+#Safe_Child_LLM_Benchmark
 
 Safe_Child_LLM is an open-source robustness benchmark for safeguarding content presented by large language models (LLMs) to children or family-friendly audiences. The primary goal of this benchmark is twofold:
 1.	Evaluating content to ensure it adheres to child-safe standards (i.e., checking for language or requests that might be deemed inappropriate, harmful, or unsafe for younger users).
 2.	Enabling new safety solutions to defend LLMs from producing content inappropriate for children.
+
 To achieve these goals, we provide:
 •	A KSB-Behaviors dataset, which is a set of curated benign and problematic behaviors relevant to child safety. These behaviors are sourced from child-safety guidelines, online safety policies, and fictional/hypothetical scenarios.
 •	A Safe_Child_LLM_Benchmark leaderboard, which tracks the performance of various defenses (and potentially attacks, if relevant) on the SCL-Behaviors dataset.
 •	A repository of submitted “child-safety prompts”, i.e., transformation prompts, red-teaming examples, and unsafe text that may appear in child-oriented contexts.
 We hope Safe_Child_LLM_Benchmark provides a practical foundation for researchers, developers, and stakeholders to evaluate, compare, and advance methods that keep LLM outputs safe for children.
 ________________________________________
-Table of Contents
+#Table of Contents
 1.	Use Cases
 2.	Installation
 3.	Loading Submitted Prompts
@@ -27,7 +28,7 @@ o	Querying a Defended LLM
 10.	License
 11.	Contributing
 ________________________________________
-What is Safe_Child_LLM_Benchmark?
+#What is Safe_Child_LLM_Benchmark?
 
 Safe_Child_LLM_Benchmark is designed to identify, evaluate, and mitigate content that may be inappropriate for children. This includes, but is not limited to:
 •	Violent content: Overly graphic or disturbing responses.
@@ -37,7 +38,7 @@ Safe_Child_LLM_Benchmark is designed to identify, evaluate, and mitigate content
 
 Safe_Child_LLM_Benchmark is designed as a living project: we welcome community submissions of new data, new defenses, or new “challenges” (unwanted or malicious text). By improving detection and refusal capabilities, we can help LLMs produce safer, more family-friendly responses.
 ________________________________________
-Use Cases
+#Use Cases
 Here are some ways you might use this repository:
 1.	Loading Submitted Kid-Safety Prompts. Researchers may submit prompts designed to test or “trick” an LLM into producing unsafe content for children.
 2.	Accessing the KSB-Behaviors Dataset. A curated list of 200 (or more) behaviors—100 harmful and 100 benign—that reflect various child safety scenarios.
@@ -45,7 +46,7 @@ Here are some ways you might use this repository:
 4.	Submitting a New Attack or Defense. Researchers can contribute new strategies to test how well an LLM avoids or filters out unsafe material.
 5.	Child-safety and Refusal Judges. Evaluate LLM outputs against state-of-the-art classification or filtering models that detect harmful or refusal content.
 ________________________________________
-Installation
+#Installation
 You can install the kidsafetybench package from PyPI:
 bash
 CopyEdit
@@ -61,7 +62,7 @@ git clone https://github.com/YourOrg/kidsafetybench.git
 cd kidsafetybench
 pip install -e .
 ________________________________________
-Loading Submitted Prompts
+#Loading Submitted Prompts
 All user-submitted or algorithm-generated prompts are stored in our KidSafetyBench artifacts repository. Each artifact includes metadata about:
 •	The method used (e.g., a specific “attack” style or safety pipeline).
 •	The model tested (e.g., vicuna-13b-v1.5, gpt-4, etc.).
@@ -78,7 +79,7 @@ artifact = ksb.read_artifact(
 print(artifact.prompts[75])  # e.g., print the 75th prompt
 Artifacts typically include information about how many queries were required, whether the model output was flagged, how the model responded, etc.
 ________________________________________
-Accessing the KSB-Behaviors Dataset
+#Accessing the KSB-Behaviors Dataset
 We include two core datasets, each containing 100 behaviors:
 1.	Harmful Behaviors (KSB-Behaviors). 100 real or hypothetical scenarios that LLMs should refuse or sanitize.
 2.	Benign Behaviors. 100 thematically similar but safe topics, ensuring models can still provide helpful answers without inappropriately filtering neutral requests.
