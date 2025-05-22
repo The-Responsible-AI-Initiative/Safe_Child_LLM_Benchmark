@@ -1,12 +1,14 @@
-KidSafetyBench
-KidSafetyBench is an open-source robustness benchmark for safeguarding content presented by large language models (LLMs) to children or family-friendly audiences. The primary goal of this benchmark is twofold:
+
+""Safe_Child_LLM_Benchmark""
+
+Safe_Child_LLM is an open-source robustness benchmark for safeguarding content presented by large language models (LLMs) to children or family-friendly audiences. The primary goal of this benchmark is twofold:
 1.	Evaluating content to ensure it adheres to child-safe standards (i.e., checking for language or requests that might be deemed inappropriate, harmful, or unsafe for younger users).
 2.	Enabling new safety solutions to defend LLMs from producing content inappropriate for children.
 To achieve these goals, we provide:
 •	A KSB-Behaviors dataset, which is a set of curated benign and problematic behaviors relevant to child safety. These behaviors are sourced from child-safety guidelines, online safety policies, and fictional/hypothetical scenarios.
-•	A KidSafetyBench leaderboard, which tracks the performance of various defenses (and potentially attacks, if relevant) on the KSB-Behaviors dataset.
-•	A repository of submitted “kid-safety prompts”, i.e., transformation prompts, red-teaming examples, and unsafe text that may appear in child-oriented contexts.
-We hope KidSafetyBench provides a practical foundation for researchers, developers, and stakeholders to evaluate, compare, and advance methods that keep LLM outputs safe for children.
+•	A Safe_Child_LLM_Benchmark leaderboard, which tracks the performance of various defenses (and potentially attacks, if relevant) on the SCL-Behaviors dataset.
+•	A repository of submitted “child-safety prompts”, i.e., transformation prompts, red-teaming examples, and unsafe text that may appear in child-oriented contexts.
+We hope Safe_Child_LLM_Benchmark provides a practical foundation for researchers, developers, and stakeholders to evaluate, compare, and advance methods that keep LLM outputs safe for children.
 ________________________________________
 Table of Contents
 1.	Use Cases
@@ -19,19 +21,21 @@ o	Loading a Local Model via vLLM
 o	Querying an LLM
 o	Querying a Defended LLM
 6.	Submitting a New Safety Strategy (Attack or Defense)
-7.	KidSafety and Refusal Judges
+7.	Child-Safety and Refusal Judges
 8.	Judges Dataset
-9.	Citing KidSafetyBench
+9.	Citing Safe_Child_LLM_Benchmark
 10.	License
 11.	Contributing
 ________________________________________
-What is KidSafetyBench?
-KidSafetyBench is designed to identify, evaluate, and mitigate content that may be inappropriate for children. This includes, but is not limited to:
+What is Safe_Child_LLM_Benchmark?
+
+Safe_Child_LLM_Benchmark is designed to identify, evaluate, and mitigate content that may be inappropriate for children. This includes, but is not limited to:
 •	Violent content: Overly graphic or disturbing responses.
 •	Sexual content: Explicit language or references unsuitable for minors.
 •	Harassment and bullying: Content containing insults, hate, or encouragement of harmful behavior.
 •	Misleading or dangerous instructions: Guidance on dangerous acts or substances.
-KidSafetyBench is designed as a living project: we welcome community submissions of new data, new defenses, or new “challenges” (unwanted or malicious text). By improving detection and refusal capabilities, we can help LLMs produce safer, more family-friendly responses.
+
+Safe_Child_LLM_Benchmark is designed as a living project: we welcome community submissions of new data, new defenses, or new “challenges” (unwanted or malicious text). By improving detection and refusal capabilities, we can help LLMs produce safer, more family-friendly responses.
 ________________________________________
 Use Cases
 Here are some ways you might use this repository:
@@ -39,7 +43,7 @@ Here are some ways you might use this repository:
 2.	Accessing the KSB-Behaviors Dataset. A curated list of 200 (or more) behaviors—100 harmful and 100 benign—that reflect various child safety scenarios.
 3.	Pipeline for Red-Teaming LLMs. Tools to systematically query an LLM and measure how often it produces unsafe or disallowed content.
 4.	Submitting a New Attack or Defense. Researchers can contribute new strategies to test how well an LLM avoids or filters out unsafe material.
-5.	KidSafety and Refusal Judges. Evaluate LLM outputs against state-of-the-art classification or filtering models that detect harmful or refusal content.
+5.	Child-safety and Refusal Judges. Evaluate LLM outputs against state-of-the-art classification or filtering models that detect harmful or refusal content.
 ________________________________________
 Installation
 You can install the kidsafetybench package from PyPI:
