@@ -1,5 +1,5 @@
 import json
-from prompts import *
+from kidsafellm.prompts import *
 from utils.gpt_api import *
 from utils.multimodal import *
 from utils.local_models import *

@@ -19,9 +19,9 @@ from anthropic import AsyncAnthropic
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from fastchat.model.model_adapter import get_conversation_template
 import google.generativeai as genai
-from config import *
+from kidsafellm.config import *
 from utils.local_models import *
-from prompts import *
+from kidsafellm.prompts import *
 from datasets import load_dataset
 
 
