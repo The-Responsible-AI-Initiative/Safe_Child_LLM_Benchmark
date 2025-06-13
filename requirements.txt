@@ -1,0 +1,14 @@
+# Core SDKs
+openai>=1.30.0               # GPT-4o and DeepInfra-compatible client
+anthropic>=0.25.0            # Claude 3 Sonnet / Haiku
+google-generativeai>=0.3.2   # Gemini 1.5 Flash / Pro
+
+# HTTP / misc utilities
+requests>=2.31.0
+
+# Analysis and progress utilities
+numpy>=1.26.0
+tqdm>=4.66.0
+
+# Testing
+pytest>=7.4.0
