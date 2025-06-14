@@ -1,6 +1,9 @@
 # Safe-Child LLM Benchmark
 *A lightweight, open-source suite for red-team evaluation of refusal and policy-compliance in large language models.*
 
+ChildSafeLLM Dataset is also avilable on Harvard Dataverse:
+https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MRZGNB
+
 ---
 
 ## What is it?
